@@ -12,18 +12,18 @@ const links = [
 		name: 'Github',
 		link: 'https://github.com/LucasCoppola',
 		username: 'Lucas Coppola',
-		icon: <AiFillGithub className="h-12 w-12 z-10" />
+		icon: <AiFillGithub className="h-12 w-12 text-gray-700 dark:text-gray-100" />
 	},
 	{
 		name: 'LinkedIn',
 		link: 'https://www.linkedin.com/in/lucas-coppola',
 		username: 'Lucas Coppola',
-		icon: <AiFillLinkedin className="h-12 w-12 z-10" />
+		icon: <AiFillLinkedin className="h-12 w-12 text-gray-700 dark:text-gray-100" />
 	},
 	{
 		name: 'Gmail',
 		username: 'lucascoppola21@gmail.com',
-		icon: <BiLogoGmail className="h-12 w-12 z-10" />
+		icon: <BiLogoGmail className="h-12 w-12 text-gray-700 dark:text-gray-100" />
 	}
 ]
 
@@ -49,7 +49,7 @@ export default function Contact() {
 			}}
 		>
 			<SectionHeading>Contact me</SectionHeading>
-			<div className="flex justify-center gap-9 mt-16">
+			<div className="flex justify-center gap-9">
 				{links.map((link, i) => (
 					<ContactCard key={i} link={link} />
 				))}

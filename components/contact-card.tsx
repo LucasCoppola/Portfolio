@@ -20,7 +20,7 @@ export default function ContactCard({
 	return (
 		<Link href={link.link || ''} target="_blank">
 			<div
-				className="group relative w-72 rounded-xl border border-white/10 bg-gray-900 px-8 pt-6 pb-12 shadow-2xl"
+				className="group relative w-72 rounded-xl border dark:border-white/10 dark:bg-gray-900 px-8 pt-6 pb-12 shadow-xl dark:shadow-2xl"
 				onMouseMove={handleMouseMove}
 			>
 				<motion.div
@@ -38,8 +38,10 @@ export default function ContactCard({
 				<div className="flex flex-col items-center justify-center relative">
 					<i>{link.icon}</i>
 
-					<p className="mt-6 text-xl font-bold tracking-tighter text-gray-300">{link.username}</p>
-					<span className="mt-2 text-sm text-zinc-400">{link.name}</span>
+					<p className="mt-6 text-xl font-bold tracking-tighter text-gray-700 dark:text-gray-300">
+						{link.username}
+					</p>
+					<span className="mt-2 text-sm text-zinc-600 dark:text-zinc-400">{link.name}</span>
 				</div>
 			</div>
 		</Link>
