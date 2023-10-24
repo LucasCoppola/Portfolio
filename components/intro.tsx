@@ -21,7 +21,7 @@ export default function Intro() {
 			>
 				Hi, I'm <span className="font-bold">Lucas</span>, a{' '}
 				<span className="font-bold">full-stack developer</span> specializing in frontend development. I build
-				high-quality web applications using Typescript, React, and Node.
+				high-quality web applications using Typescript, React, and Next.js.
 			</motion.h1>
 
 			<motion.div
@@ -34,13 +34,13 @@ export default function Intro() {
 			>
 				<Link
 					href="#contact"
-					className="group bg-gray-900 text-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 hover:bg-gray-950 active:scale-105 transition"
+					className="group bg-gray-900 text-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-105 hover:scale-105 hover:bg-gray-950 active:scale-105 transition"
 					onClick={() => {
 						setActiveSection('Contact')
 						setTimeOfLastClick(Date.now())
 					}}
 				>
-					Contact me here <BsArrowRight className="opacity-70 group-hover:translate-x-1 transition" />
+					Contact me here <BsArrowRight className="opacity-70 group-hover:translate-x-0.5 transition" />
 				</Link>
 
 				<a
