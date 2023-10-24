@@ -49,7 +49,7 @@ export default function Contact() {
 			}}
 		>
 			<SectionHeading>Contact me</SectionHeading>
-			<div className="flex justify-center gap-9">
+			<div className="flex flex-wrap items-center justify-center gap-9">
 				{links.map((link, i) => (
 					<ContactCard key={i} link={link} />
 				))}
