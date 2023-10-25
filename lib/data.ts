@@ -1,6 +1,5 @@
-import corpcommentImg from '@/public/corpcomment.png'
-import rmtdevImg from '@/public/rmtdev.png'
-import wordanalyticsImg from '@/public/wordanalytics.png'
+import thulloImg from '@/public/thullo-boards.png'
+import strengthShopImg from '@/public/strength-shop.png'
 
 export const links = [
 	{
@@ -27,25 +26,17 @@ export const links = [
 
 export const projectsData = [
 	{
-		title: 'CorpComment',
-		description:
-			'I worked as a full-stack developer on this startup project for 2 years. Users can give public feedback to companies.',
-		tags: ['React', 'Next.js', 'MongoDB', 'Tailwind', 'Prisma'],
-		imageUrl: corpcommentImg
+		title: 'Thullo',
+		description: 'Trello-inspired task management web application.',
+		tags: ['React', 'Next.js', 'Tailwind', 'Shadcn/ui', 'Prisma', 'React Query', 'Auth.js', 'PostgreSQL'],
+		imageUrl: thulloImg
 	},
 	{
-		title: 'rmtDev',
+		title: 'Strength Shop',
 		description:
-			'Job board for remote developer jobs. I was the front-end developer. It has features like filtering, sorting and pagination.',
-		tags: ['React', 'TypeScript', 'Next.js', 'Tailwind', 'Redux'],
-		imageUrl: rmtdevImg
-	},
-	{
-		title: 'Word Analytics',
-		description:
-			'A public web app for quick analytics on text. It shows word count, character count and social media post limits.',
-		tags: ['React', 'Next.js', 'SQL', 'Tailwind', 'Framer'],
-		imageUrl: wordanalyticsImg
+			'E-commerce website specializing in strength sports equipment, offering a wide range of products for strength athletes and fitness enthusiasts.',
+		tags: ['React', 'TypeScript', 'Tailwind'],
+		imageUrl: strengthShopImg
 	}
 ] as const
 
@@ -60,7 +51,7 @@ export const skillsData = [
 	'Git',
 	'Tailwind',
 	'Prisma',
-	'MongoDB',
 	'Express',
+	'MongoDB',
 	'PostgreSQL'
 ] as const
