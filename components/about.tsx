@@ -19,7 +19,7 @@ export default function About() {
 		>
 			<SectionHeading>About me</SectionHeading>
 			<p className="mb-3">
-				My name is <span className="font-semibold">Lucas Coppola</span> and i'm from{' '}
+				I'm <span className="font-semibold">Lucas Coppola</span>, originally from{' '}
 				<span className="italic">Buenos Aires, Argentina.</span>
 				<br />
 				When i got into coding i didn't have a big 'aha' moment, it was more of a gradual evolution. I tried it
@@ -33,7 +33,7 @@ export default function About() {
 				enjoy working with the <span className="font-semibold">MERN</span> stack.
 				<br />
 				<br />
-				By the way, I'm always up for diving into new tech stuff.
+				By the way, I'm always up for diving into new technologies.
 			</p>
 		</motion.section>
 	)
