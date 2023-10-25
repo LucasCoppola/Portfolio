@@ -34,7 +34,18 @@ export default function ContactCard({
               `
 				}}
 			/>
-			<Link href={link.link || ''} target="_blank">
+			{link.link ? (
+				<Link href={link.link} target="_blank">
+					<div className="flex flex-col items-center justify-center relative">
+						<i>{link.icon}</i>
+
+						<p className="mt-6 text-xl font-bold tracking-tighter text-gray-700 dark:text-gray-300">
+							{link.username}
+						</p>
+						<span className="mt-2 text-sm text-zinc-600 dark:text-zinc-400">{link.name}</span>
+					</div>
+				</Link>
+			) : (
 				<div className="flex flex-col items-center justify-center relative">
 					<i>{link.icon}</i>
 
@@ -43,7 +54,7 @@ export default function ContactCard({
 					</p>
 					<span className="mt-2 text-sm text-zinc-600 dark:text-zinc-400">{link.name}</span>
 				</div>
-			</Link>
+			)}
 		</div>
 	)
 }
