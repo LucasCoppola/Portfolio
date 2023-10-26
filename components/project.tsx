@@ -3,6 +3,9 @@
 import { projectsData } from '@/lib/data'
 import Image from 'next/image'
 import { Sheet, SheetContent, SheetDescription, SheetHeader, SheetTitle, SheetTrigger } from '@/components/ui/sheet'
+import Link from 'next/link'
+import { LiaGlobeAmericasSolid } from 'react-icons/lia'
+import { AiFillGithub } from 'react-icons/ai'
 
 type ProjectProps = (typeof projectsData)[number]
 
@@ -30,12 +33,56 @@ export default function Project({ title, description, tags, imageUrl }: ProjectP
 					</div>
 				</div>
 			</SheetTrigger>
-			<SheetContent className="w-[400px] sm:w-2/5">
+			<SheetContent className="w-[400px] sm:w-2/5 overflow-y-auto">
 				<SheetHeader>
-					<SheetTitle>Are you sure absolutely sure?</SheetTitle>
-					<SheetDescription>
-						This action cannot be undone. This will permanently delete your account and remove your data
-						from our servers.
+					<SheetTitle className="text-2xl font-bold text-gray-200 dark:text-white/90 tracking-tighter pb-3">
+						{title}
+					</SheetTitle>
+					<SheetDescription asChild>
+						<>
+							<p className="text-sm text-white/80 pb-5 tracking-tight">{description}</p>
+							<Image src={imageUrl} alt={title} className="rounded-xl object-cover h-[300px]" />
+							<span className="text-lg pt-5 pb-3 font-medium text-white tracking-tight">About</span>
+							<p className="text-sm text-white/80 tracking-tight">
+								Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequuntur atque nostrum
+								quae ab vel voluptas rerum odit accusamus repellat itaque, corrupti unde, cupiditate
+								debitis id sed doloremque, sapiente veniam. Enim?
+							</p>
+							<span className="text-lg pt-5 pb-3 font-medium text-white tracking-tight">
+								Technologies
+							</span>
+							<ul className="flex flex-wrap gap-2">
+								{tags.map((tag, index) => (
+									<li
+										className="bg-blue-100 text-blue-800 text-[11px] font-semibold mr-2 px-3 py-1.5 rounded dark:bg-[#13283e] dark:text-blue-200 capitalize"
+										key={index}
+									>
+										{tag}
+									</li>
+								))}
+							</ul>
+							<span className="flex items-center text-lg pt-5 pb-3 font-medium text-white tracking-tight">
+								<LiaGlobeAmericasSolid className="mr-1" />
+								Website
+							</span>
+							<Link
+								href=""
+								className="text-[#3f566e] font-semibold tracking-tighter text-sm hover:underline cursor-pointer"
+							>
+								https://strength-shop.netlify.app
+							</Link>
+
+							<span className="flex items-center text-lg pt-5 pb-3 font-medium text-white tracking-tight">
+								<AiFillGithub className="mr-1" />
+								Github
+							</span>
+							<Link
+								href=""
+								className="text-[#3f566e] font-semibold tracking-tighter text-sm hover:underline cursor-pointer"
+							>
+								https://github.com/LucasCoppola/Strength-Shop
+							</Link>
+						</>
 					</SheetDescription>
 				</SheetHeader>
 			</SheetContent>
