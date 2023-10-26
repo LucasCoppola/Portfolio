@@ -1,30 +1,34 @@
-[![Watch tutorial here](https://img.youtube.com/vi/sUKptmUVIBM/0.jpg)](https://youtu.be/sUKptmUVIBM)
+# <p align="center">Portfolio Website<p/>
 
-# [Watch video here](https://youtu.be/sUKptmUVIBM)
+<p align="center">My personal website, built with Next.js, Tailwind CSS, and deployed to Vercel.<p/>
 
-## What you will learn
+## Overview
 
-- Latest Next.js 13 features
-- Next.js App Router
-- Next.js Server Actions
-- Client & Server Components
-- TypeScript (Beginner & Intermediate)
-- Tailwind CSS
-- Context API
-- Advanced Animations with Framer Motion
-- React.Email & Resend
-- Custom React hooks
-- Fresh, modern UI design
-- Light & Dark mode
-- Responsive website
+As a developer, I believe it is essential to have a centralized platform to display my projects and skills. This portfolio website serves as that platform, allowing potential clients, collaborators, or employers to get a better understanding of my skills and capabilities.
 
-## Important
+The website is designed to be user-friendly and responsive, providing an optimal viewing experience on various devices, including desktops, tablets, and mobile phones.
 
-If you want to be a professional developer, you have to know the fundamentals like JavaScript and CSS really well. I highly recommend you go through my [Professional JavaScript](https://bytegrad.com/courses/professional-javascript) and [Professional CSS](https://bytegrad.com/courses/professional-css) courses.
+## Technologies Used
 
-I'm close to releasing a complete React & Next.js course. Get on the email list to receive early-bird pricing: [link](https://email.bytegrad.com/).
+The website is built using the following technologies:
 
-## Setup
+-   [Next.js:](https://nextjs.org/) Next.js is a React framework that enables server-side rendering and other powerful features.
+-   [Tailwind CSS:](https://tailwindcss.com/) Tailwind CSS is a utility-first CSS framework used for styling the website in a highly customizable manner.
+-   [React:](https://react.dev/) React is a JavaScript library for building user interfaces, and it serves as the foundation for the website's components.
 
-1. Add RESEND_API_KEY environment variable in .env.local
-2. In the send-email.ts action file, change the "to" email to your own email
+## Installation
+
+To clone and run this application, you'll need [Git](https://git-scm.com) and [Node.js](https://nodejs.org/en/download/) (which comes with [npm](http://npmjs.com)) installed on your computer. From your command line:
+
+```bash
+# Clone this repository
+$ git clone https://github.com/LucasCoppola/PortfolioV3.git
+
+# Install dependencies
+$ npm install
+
+# Run the development server
+$ npm run dev
+```
+
+The development server should now be running locally. You can access the website by opening your web browser and navigating to http://localhost:3000.
