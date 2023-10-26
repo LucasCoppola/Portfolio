@@ -9,7 +9,22 @@ import { AiFillGithub } from 'react-icons/ai'
 
 type ProjectProps = (typeof projectsData)[number]
 
-export default function Project({ title, description, tags, imageUrl }: ProjectProps) {
+/*
+	To-do: 
+		- Light Mode
+		- Responsiveness
+*/
+
+export default function Project({
+	title,
+	description,
+	tags,
+	imageUrl,
+	longDescription,
+	repository,
+	video,
+	website
+}: ProjectProps) {
 	return (
 		<Sheet>
 			<SheetTrigger asChild>
@@ -41,13 +56,11 @@ export default function Project({ title, description, tags, imageUrl }: ProjectP
 					<SheetDescription asChild>
 						<>
 							<p className="text-sm text-white/80 pb-5 tracking-tight">{description}</p>
-							<Image src={imageUrl} alt={title} className="rounded-xl object-cover h-[300px]" />
+							<video controls autoPlay muted className="rounded-xl object-cover" height={300}>
+								<source src={video} type="video/mp4" />
+							</video>
 							<span className="text-lg pt-5 pb-3 font-medium text-white tracking-tight">About</span>
-							<p className="text-sm text-white/80 tracking-tight">
-								Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequuntur atque nostrum
-								quae ab vel voluptas rerum odit accusamus repellat itaque, corrupti unde, cupiditate
-								debitis id sed doloremque, sapiente veniam. Enim?
-							</p>
+							<p className="text-sm text-white/80 tracking-tight">{longDescription}</p>
 							<span className="text-lg pt-5 pb-3 font-medium text-white tracking-tight">
 								Technologies
 							</span>
@@ -66,10 +79,10 @@ export default function Project({ title, description, tags, imageUrl }: ProjectP
 								Website
 							</span>
 							<Link
-								href=""
+								href={website}
 								className="text-[#3f566e] font-semibold tracking-tighter text-sm hover:underline cursor-pointer"
 							>
-								https://strength-shop.netlify.app
+								{website}
 							</Link>
 
 							<span className="flex items-center text-lg pt-5 pb-3 font-medium text-white tracking-tight">
@@ -77,10 +90,10 @@ export default function Project({ title, description, tags, imageUrl }: ProjectP
 								Github
 							</span>
 							<Link
-								href=""
+								href={repository}
 								className="text-[#3f566e] font-semibold tracking-tighter text-sm hover:underline cursor-pointer"
 							>
-								https://github.com/LucasCoppola/Strength-Shop
+								{repository}
 							</Link>
 						</>
 					</SheetDescription>
