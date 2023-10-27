@@ -22,7 +22,7 @@ export default function Project({
 	return (
 		<Sheet>
 			<SheetTrigger asChild>
-				<div className="relative w-[420px] h-[420px] border rounded-lg shadow-lg group cursor-pointer">
+				<div className="relative w-[360px] sm:w-[420px] h-[420px] border rounded-lg shadow-lg group cursor-pointer">
 					<Image src={imageUrl} alt={title} layout="fill" className="rounded-lg object-cover" />
 					<div className="absolute inset-0 bg-black bg-opacity-50 backdrop-blur-lg flex flex-col items-start rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 px-8 pb-10">
 						<h3 className="text-3xl font-bold text-gray-200 dark:text-white tracking-tighter mt-auto mb-2">
@@ -73,7 +73,7 @@ export default function Project({
 							<ul className="flex flex-wrap gap-2">
 								{tags.map((tag, index) => (
 									<li
-										className="bg-blue-200 text-blue-800 text-[11px] font-semibold mr-2 px-3 py-1.5 rounded dark:bg-[#13283e] dark:text-blue-200 capitalize"
+										className="bg-blue-100 text-blue-800 text-[11px] font-semibold mr-2 px-3 py-1.5 rounded dark:bg-[#13283e] dark:text-blue-200 capitalize"
 										key={index}
 									>
 										{tag}
