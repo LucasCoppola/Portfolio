@@ -12,7 +12,6 @@ type ProjectProps = (typeof projectsData)[number]
 /*
 	To-do: 
 		- Light Mode
-		- Responsiveness
 */
 
 export default function Project({
@@ -48,20 +47,22 @@ export default function Project({
 					</div>
 				</div>
 			</SheetTrigger>
-			<SheetContent className="w-[400px] sm:w-2/5 overflow-y-auto">
+			<SheetContent className="w-[400px] sm:w-[500px] lg:w-2/5 overflow-y-auto">
 				<SheetHeader>
-					<SheetTitle className="text-2xl font-bold text-gray-200 dark:text-white/90 tracking-tighter pb-3">
+					<SheetTitle className="text-2xl text-left font-bold text-gray-200 dark:text-white/90 tracking-tighter pb-3">
 						{title}
 					</SheetTitle>
 					<SheetDescription asChild>
 						<>
-							<p className="text-sm text-white/80 pb-5 tracking-tight">{description}</p>
+							<p className="text-sm text-white/80 pb-5 tracking-tight text-left">{description}</p>
 							<video controls autoPlay muted className="rounded-xl object-cover" height={300}>
 								<source src={video} type="video/mp4" />
 							</video>
-							<span className="text-lg pt-5 pb-3 font-medium text-white tracking-tight">About</span>
-							<p className="text-sm text-white/80 tracking-tight">{longDescription}</p>
-							<span className="text-lg pt-5 pb-3 font-medium text-white tracking-tight">
+							<span className="text-lg pt-5 pb-3 font-medium text-white tracking-tight text-left">
+								About
+							</span>
+							<p className="text-sm text-white/80 tracking-tight text-left">{longDescription}</p>
+							<span className="text-lg pt-5 pb-3 font-medium text-white tracking-tight text-left">
 								Technologies
 							</span>
 							<ul className="flex flex-wrap gap-2">
@@ -80,7 +81,7 @@ export default function Project({
 							</span>
 							<Link
 								href={website}
-								className="text-[#3f566e] font-semibold tracking-tighter text-sm hover:underline cursor-pointer"
+								className="text-[#3f566e] text-left font-semibold tracking-tighter text-sm hover:underline cursor-pointer"
 							>
 								{website}
 							</Link>
@@ -91,7 +92,7 @@ export default function Project({
 							</span>
 							<Link
 								href={repository}
-								className="text-[#3f566e] font-semibold tracking-tighter text-sm hover:underline cursor-pointer"
+								className="text-[#3f566e] text-left font-semibold tracking-tighter text-sm hover:underline cursor-pointer"
 							>
 								{repository}
 							</Link>
