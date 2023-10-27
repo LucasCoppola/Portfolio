@@ -9,11 +9,6 @@ import { AiFillGithub } from 'react-icons/ai'
 
 type ProjectProps = (typeof projectsData)[number]
 
-/*
-	To-do: 
-		- Light Mode
-*/
-
 export default function Project({
 	title,
 	description,
@@ -49,50 +44,60 @@ export default function Project({
 			</SheetTrigger>
 			<SheetContent className="w-[400px] sm:w-[500px] lg:w-2/5 overflow-y-auto">
 				<SheetHeader>
-					<SheetTitle className="text-2xl text-left font-bold text-gray-200 dark:text-white/90 tracking-tighter pb-3">
+					<SheetTitle className="text-2xl text-left font-bold text-gray-900 dark:text-white/90 tracking-tighter pb-3">
 						{title}
 					</SheetTitle>
 					<SheetDescription asChild>
 						<>
-							<p className="text-sm text-white/80 pb-5 tracking-tight text-left">{description}</p>
-							<video controls autoPlay muted className="rounded-xl object-cover" height={300}>
+							<p className="text-sm text-gray-800 dark:text-white/80 pb-5 tracking-tight text-left">
+								{description}
+							</p>
+							<video
+								controls
+								autoPlay
+								muted
+								className="rounded-xl object-cover border dark:border-0"
+								height={300}
+							>
 								<source src={video} type="video/mp4" />
 							</video>
-							<span className="text-lg pt-5 pb-3 font-medium text-white tracking-tight text-left">
+							<span className="text-lg pt-5 pb-3 font-medium text-gray-900 dark:text-white tracking-tight text-left">
 								About
 							</span>
-							<p className="text-sm text-white/80 tracking-tight text-left">{longDescription}</p>
-							<span className="text-lg pt-5 pb-3 font-medium text-white tracking-tight text-left">
+							<p className="text-sm text-gray-800 dark:text-white/80 tracking-tight text-left">
+								{longDescription}
+							</p>
+							<span className="text-lg pt-5 pb-3 font-medium text-gray-900 dark:text-white tracking-tight text-left">
 								Technologies
 							</span>
 							<ul className="flex flex-wrap gap-2">
 								{tags.map((tag, index) => (
 									<li
-										className="bg-blue-100 text-blue-800 text-[11px] font-semibold mr-2 px-3 py-1.5 rounded dark:bg-[#13283e] dark:text-blue-200 capitalize"
+										className="bg-blue-200 text-blue-800 text-[11px] font-semibold mr-2 px-3 py-1.5 rounded dark:bg-[#13283e] dark:text-blue-200 capitalize"
 										key={index}
 									>
 										{tag}
 									</li>
 								))}
 							</ul>
-							<span className="flex items-center text-lg pt-5 pb-3 font-medium text-white tracking-tight">
+							<span className="flex items-center text-lg pt-5 pb-3 font-medium text-gray-900 dark:text-white tracking-tight">
 								<LiaGlobeAmericasSolid className="mr-1" />
 								Website
 							</span>
 							<Link
 								href={website}
-								className="text-[#3f566e] text-left font-semibold tracking-tighter text-sm hover:underline cursor-pointer"
+								className="text-gray-500 dark:text-[#3f566e] text-left font-semibold tracking-tighter text-sm hover:underline cursor-pointer"
 							>
 								{website}
 							</Link>
 
-							<span className="flex items-center text-lg pt-5 pb-3 font-medium text-white tracking-tight">
+							<span className="flex items-center text-lg pt-5 pb-3 font-medium text-gray-900 dark:text-white tracking-tight">
 								<AiFillGithub className="mr-1" />
 								Github
 							</span>
 							<Link
 								href={repository}
-								className="text-[#3f566e] text-left font-semibold tracking-tighter text-sm hover:underline cursor-pointer"
+								className="text-gray-500 dark:text-[#3f566e] text-left font-semibold tracking-tighter text-sm hover:underline cursor-pointer"
 							>
 								{repository}
 							</Link>
