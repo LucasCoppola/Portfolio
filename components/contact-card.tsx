@@ -1,12 +1,15 @@
 import { motion, useMotionTemplate, useMotionValue } from 'framer-motion'
+import { Check, Copy } from 'lucide-react'
 import Link from 'next/link'
-import { MouseEvent } from 'react'
+import { MouseEvent, useState, useEffect } from 'react'
 
 export default function ContactCard({
 	link
 }: {
 	link: { name: string; username: string; icon: JSX.Element; link?: string }
 }) {
+	const [isCopied, setIsCopied] = useState(false)
+
 	let mouseX = useMotionValue(0)
 	let mouseY = useMotionValue(0)
 
@@ -16,6 +19,16 @@ export default function ContactCard({
 		mouseX.set(clientX - left)
 		mouseY.set(clientY - top)
 	}
+
+	useEffect(() => {
+		const timeout = setTimeout(() => {
+			setIsCopied(false)
+		}, 3000)
+
+		return () => {
+			clearTimeout(timeout)
+		}
+	}, [isCopied])
 
 	return (
 		<div
@@ -48,11 +61,24 @@ export default function ContactCard({
 			) : (
 				<div className="flex flex-col items-center justify-center relative">
 					<i>{link.icon}</i>
-
 					<p className="mt-6 text-xl font-bold tracking-tighter text-gray-700 dark:text-gray-300">
 						{link.username}
 					</p>
-					<span className="mt-2 text-sm text-zinc-600 dark:text-zinc-400">{link.name}</span>
+					<div className="flex items-center mt-2 text-zinc-600 dark:text-zinc-400">
+						<span className="text-sm mr-2">{link.name}</span>{' '}
+						{isCopied ? (
+							<Check size={14} />
+						) : (
+							<Copy
+								size={14}
+								cursor="pointer"
+								onClick={() => {
+									navigator.clipboard.writeText('lucascoppola21@gmail.com')
+									setIsCopied(true)
+								}}
+							/>
+						)}
+					</div>
 				</div>
 			)}
 		</div>
