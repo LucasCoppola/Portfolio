@@ -23,7 +23,7 @@ export default function Project({
 		<Sheet>
 			<SheetTrigger asChild>
 				<div className="relative w-[360px] sm:w-[420px] h-[420px] border rounded-lg shadow-lg group cursor-pointer">
-					<Image src={imageUrl} alt={title} layout="fill" className="rounded-lg object-cover" />
+					<Image src={imageUrl} alt={title} className="rounded-lg object-cover" fill />
 					<div className="absolute inset-0 bg-black bg-opacity-50 backdrop-blur-lg flex flex-col items-start rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 px-8 pb-10">
 						<h3 className="text-3xl font-bold text-gray-200 dark:text-white tracking-tighter mt-auto mb-2">
 							{title}
@@ -42,7 +42,7 @@ export default function Project({
 					</div>
 				</div>
 			</SheetTrigger>
-			<SheetContent className="w-[400px] sm:w-[500px] lg:w-2/5 overflow-y-auto">
+			<SheetContent className="w-[360px] sm:w-[500px] lg:w-2/5 overflow-y-auto">
 				<SheetHeader>
 					<SheetTitle className="text-2xl text-left font-bold text-gray-900 dark:text-white/90 tracking-tighter pb-3">
 						{title}
